@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@drawable/audiobg">
+
+    <TextView
+        android:id="@+id/txtVw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Now Playing: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#DCDDD5D5" />
+
+    <TextView
+        android:id="@+id/txtSname"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtVw1"
+        android:layout_toRightOf="@+id/txtVw1"
+        android:text="EP:2 Contact"
+        android:textColor="#DCDDD5D5"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/txtVw1"
+        android:layout_marginTop="-16dp"
+        android:background="#00C654A0"
+        android:src="@drawable/contact" />
+
+    <ImageButton
+        android:id="@+id/btnBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginLeft="20dp"
+        android:src="@android:drawable/ic_media_rew"
+        android:tint="#831E1E" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBackward"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/btnBackward"
+        android:src="@android:drawable/ic_media_play"
+        android:tint="#831E1E" />
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPlay"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/btnPlay"
+        android:contentDescription="TODO"
+        android:src="@android:drawable/ic_media_pause"
+        android:tint="#831E1E" />
+
+    <ImageButton
+        android:id="@+id/btnForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPause"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/btnPause"
+        android:contentDescription="@+id/imageButton3"
+        android:src="@android:drawable/ic_media_ff"
+        android:tint="#831E1E" />
+
+    <TextView
+        android:id="@+id/txtStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sBar"
+        android:text="0 min, 0 sec"
+        android:textColor="#DCDDD5D5" />
+
+    <SeekBar
+        android:id="@+id/sBar"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBackward"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginLeft="-29dp"
+        android:layout_toRightOf="@+id/txtStartTime"
+        android:layout_toStartOf="@+id/txtSongTime"
+        android:progressTint="#DCDDD5D5" />
+
+    <TextView
+        android:id="@+id/txtSongTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sBar"
+        android:layout_toRightOf="@+id/btnForward"
+        android:text="0:00"
+        android:textColor="#DCDDD5D5" />
+</RelativeLayout>
